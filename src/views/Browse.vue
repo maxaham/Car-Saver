@@ -16,6 +16,8 @@
       <li class="pure-menu-item"><a @click="select('Nebraska')" href="#" class="pure-menu-link">Nebraska</a></li>
       <li class="pure-menu-item"><a @click="select('Montana')" href="#" class="pure-menu-link">Montana</a></li>
       <li class="pure-menu-item"><a @click="select('Oklahoma')" href="#" class="pure-menu-link">Oklahoma</a></li>
+      <li class="pure-menu-item"><a @click="select('Oregon')" href="#" class="pure-menu-link">Oregon</a></li>
+      <li class="pure-menu-item"><a @click="select('Florida')" href="#" class="pure-menu-link">Florida</a></li>
       <li class="pure-menu-item"><a @click="select('Washington')" href="#" class="pure-menu-link">Washington</a></li>
       <li class="pure-menu-item"><a @click="select('Maryland')" href="#" class="pure-menu-link">Maryland</a></li>
       <!-- <li class="pure-menu-item" v-for="state in USstate" :key="product.state"><a @click="select(product.state)" href="#" class="pure-menu-link">{{ product.state }}</a></li> -->
@@ -56,3 +58,19 @@ export default {
   }
 }
 </script>
+
+<style>
+.pure-menu\ pure-menu-horizontal {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.pure-menu-list {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-around !important;
+}
+.pure-menu-item {
+  /* margin: 5px !important; */
+}
+</style>

@@ -7,11 +7,8 @@
         <h2>{{product.model_year}}</h2>
         <h2>{{product.state}}</h2>
       </div>
-      <!--<div class="image">
-        <img :src="'/images/products/'+product.image">
-      </div>-->
       <div class="price">
-        <h2>${{((product.price * 301).toFixed(2))}}</h2>
+        <h2>{{makePrice(product.price)}}</h2>
         <button class="auto" @click="add(product)">Add Car</button> <!--push to cart -->
       </div>
     </div>
@@ -28,14 +25,13 @@ export default {
   methods: {
     add(product) {
         this.$root.$data.cart.push(product);
+    },
+    makePrice(price) {
+      let n = ((price * 501))
+      let str = "$" + n.toLocaleString("en-US");
+      return str;
     }
   },
-  // computed: {
-  //   priceMake() {
-  //     let n = ((this.product.price * 1005).toFixed(2));
-  //     return n.toLocaleString("en-US");
-  //   }
-  // },
 }
 
 </script>
@@ -80,9 +76,10 @@ export default {
 
 
 .price {
-  background: white;
+  background: gray;
   display: flex;
   padding-left: 10px;
+  color: white;
 }
 
 button {

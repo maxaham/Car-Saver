@@ -707,7 +707,7 @@ let mock = [
     "price": "40.95",
     "state": "New Jersey",
     "image": 1,
-    "color": "#010B13"
+    "color": "#C10B13"
   },
   {
     "id": 72,
@@ -3997,7 +3997,7 @@ let mock = [
     "price": "142.99",
     "state": "New Jersey",
     "image": 1,
-    "color": "#BA55D3"
+    "color": "#CFF5C3"
   },
   {
     "id": 401,

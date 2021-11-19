@@ -1,6 +1,6 @@
 <template>
 <div>
-  <h1> Your Cart </h1>
+  <h1> Your Cars </h1>
   <CartList :products="cart" />
 </div>
 </template>

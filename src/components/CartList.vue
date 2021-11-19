@@ -7,11 +7,8 @@
         <h2>{{product.model_year}}</h2>
         <h2>{{product.state}}</h2>
       </div>
-      <!--<div class="image">
-        <img :src="'/images/products/'+product.image">
-      </div>-->
       <div class="price">
-        <h2>${{(product.price * 301).toFixed(2)}}</h2>
+        <h2>{{makePrice(product.price)}}</h2>
         <button class="auto" @click="remove(product)">Remove</button>
       </div>
     </div>
@@ -32,6 +29,11 @@ export default {
           this.$root.$data.cart.splice(i, 1);
         }
       }
+    },
+    makePrice(price) {
+      let n = ((price * 501))
+      let str = "$" + n.toLocaleString("en-US");
+      return str;
     }
   },
 }
@@ -79,15 +81,15 @@ export default {
 
 .price {
   display: flex;
-  background: white;
-  color: red;
+  background: black;
+  color: white;
   padding-left: 10px;
 }
 
 button {
   height: 65px;
-  background: black;
-  color: gray;
+  background: gray;
+  color: white;
   border: none;
 }
 
