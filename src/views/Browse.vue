@@ -12,7 +12,12 @@
       <li class="pure-menu-item"><a @click="select('Nevada')" href="#" class="pure-menu-link">Nevada</a></li>
       <li class="pure-menu-item"><a @click="select('Colorado')" href="#" class="pure-menu-link">Colorado</a></li>
       <li class="pure-menu-item"><a @click="select('Idaho')" href="#" class="pure-menu-link">Idaho</a></li>
-      <li class="pure-menu-item"><a @click="select('Minnesota')" href="#" class="pure-menu-link">Minnesota</a></li>
+      <li class="pure-menu-item"><a @click="select('New York')" href="#" class="pure-menu-link">New York</a></li>
+      <li class="pure-menu-item"><a @click="select('Nebraska')" href="#" class="pure-menu-link">Nebraska</a></li>
+      <li class="pure-menu-item"><a @click="select('Montana')" href="#" class="pure-menu-link">Montana</a></li>
+      <li class="pure-menu-item"><a @click="select('Oklahoma')" href="#" class="pure-menu-link">Oklahoma</a></li>
+      <li class="pure-menu-item"><a @click="select('Washington')" href="#" class="pure-menu-link">Washington</a></li>
+      <li class="pure-menu-item"><a @click="select('Maryland')" href="#" class="pure-menu-link">Maryland</a></li>
       <!-- <li class="pure-menu-item" v-for="state in USstate" :key="product.state"><a @click="select(product.state)" href="#" class="pure-menu-link">{{ product.state }}</a></li> -->
     </ul>
   </div>

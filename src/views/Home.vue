@@ -14,7 +14,7 @@
 <script>
 import ProductList from "../components/ProductList.vue"
 export default {
-  name: 'Home',
+  name: 'HomePage',
   components: {
     ProductList
   },

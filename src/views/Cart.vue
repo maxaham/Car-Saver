@@ -8,7 +8,7 @@
 <script>
 import CartList from "../components/CartList.vue"
 export default {
-  name: 'Cart',
+  name: 'CartCars',
   components: {
     CartList
   },

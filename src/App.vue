@@ -42,7 +42,6 @@ computed: {
 
 body {
   margin: 50px 100px;
-
 }
 
 #menu {
@@ -54,7 +53,7 @@ body {
 }
 
 #menu a {
-  color: #B84901;
+  color: rgb(255, 56, 56);
 }
 
 #brand {

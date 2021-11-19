@@ -3,16 +3,16 @@
   <div class="products">
     <div class="product" v-for="product in products" :key="product.id">
       <div class="info" v-bind:style="{ 'background-color': product.color }">
-        <h1>{{product.make}}</h1>
-        <h2>{{product.model}}</h2>
-        <p>{{product.state}}</p>
+        <h1>{{product.make}}  {{product.model}}</h1>
+        <h2>{{product.model_year}}</h2>
+        <h2>{{product.state}}</h2>
       </div>
       <!--<div class="image">
         <img :src="'/images/products/'+product.image">
       </div>-->
       <div class="price">
-        <h2>{{product.price}}</h2>
-        <button class="auto" @click="add(product)">Add to Cart</button> <!--push to cart -->
+        <h2>${{((product.price * 301).toFixed(2))}}</h2>
+        <button class="auto" @click="add(product)">Add Car</button> <!--push to cart -->
       </div>
     </div>
   </div>
@@ -30,6 +30,12 @@ export default {
         this.$root.$data.cart.push(product);
     }
   },
+  // computed: {
+  //   priceMake() {
+  //     let n = ((this.product.price * 1005).toFixed(2));
+  //     return n.toLocaleString("en-US");
+  //   }
+  // },
 }
 
 </script>
@@ -50,27 +56,13 @@ export default {
 .product {
   margin: 10px;
   margin-top: 50px;
-  width: 200px;
-}
-
-.product img {
-  border: 2px solid #333;
-  height: 250px;
-  width: 200px;
-  object-fit: cover;
-}
-
-.product .image {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5px;
+  width: 250px;
 }
 
 .info {
-  background: #F2921D;
-  color: #000;
+  color: black;
   padding: 10px 30px;
-  height: 100px;
+  height: 120px;
 }
 
 .info h1 {
@@ -88,12 +80,14 @@ export default {
 
 
 .price {
+  background: white;
   display: flex;
+  padding-left: 10px;
 }
 
 button {
-  height: 50px;
-  background: #000;
+  height: 65px;
+  background: black;
   color: white;
   border: none;
 }

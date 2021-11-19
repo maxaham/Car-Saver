@@ -2,17 +2,17 @@
 <div class="wrapper">
   <div class="products">
     <div class="product" v-for="product in products" :key="product.id">
-      <div class="info">
-        <h1>{{product.make}}</h1>
-        <h2>{{product.model}}</h2>
-        <p>{{product.state}}</p>
+      <div class="info" v-bind:style="{ 'background-color': product.color }">
+        <h1>{{product.make}} {{product.model}}</h1>
+        <h2>{{product.model_year}}</h2>
+        <h2>{{product.state}}</h2>
       </div>
       <!--<div class="image">
         <img :src="'/images/products/'+product.image">
       </div>-->
       <div class="price">
-        <h3>{{product.price}}</h3>
-        <button class="auto" @click="remove(product)">Remove from Cart</button>
+        <h2>${{(product.price * 301).toFixed(2)}}</h2>
+        <button class="auto" @click="remove(product)">Remove</button>
       </div>
     </div>
   </div>
@@ -27,12 +27,12 @@ export default {
   },
   methods: {
     remove(product) {
-        for (var i = this.$root.$data.cart.length - 1; i >= 0; i--) {
-            if (this.$root.$data.cart[i] == product) {
-                this.$root.$data.cart.splice(i, 1);
-            }
+      for (var i = this.$root.$data.cart.length - 1; i >= 0; i--) {
+        if (this.$root.$data.cart[i] == product) {
+          this.$root.$data.cart.splice(i, 1);
+        }
+      }
     }
-}
   },
 }
 
@@ -54,27 +54,13 @@ export default {
 .product {
   margin: 10px;
   margin-top: 50px;
-  width: 200px;
-}
-
-.product img {
-  border: 2px solid #333;
-  height: 250px;
-  width: 200px;
-  object-fit: cover;
-}
-
-.product .image {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5px;
+  width: 250px;
 }
 
 .info {
-  background: #dd5608;
-  color: #000;
+  color: black;
   padding: 10px 30px;
-  height: 80px;
+  height: 120px;
 }
 
 .info h1 {
@@ -93,14 +79,15 @@ export default {
 
 .price {
   display: flex;
-  background: black;
-  color: white;
+  background: white;
+  color: red;
+  padding-left: 10px;
 }
 
 button {
-  height: 60px;
-  background: rgb(236, 164, 9);
-  color: black;
+  height: 65px;
+  background: black;
+  color: gray;
   border: none;
 }
 
