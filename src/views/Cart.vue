@@ -2,6 +2,11 @@
 <div>
   <h1> Your Cars </h1>
   <CartList :products="cart" />
+  <div class="repo">
+    <h2>
+      <a href="https://github.com/maxaham/Car-Saver">Repository</a>
+    </h2>
+  </div>
 </div>
 </template>
 
@@ -23,3 +28,10 @@ export default {
   },
 }
 </script>
+
+<style>
+.repo {
+  display: flex;
+  justify-content: center;
+}
+</style>

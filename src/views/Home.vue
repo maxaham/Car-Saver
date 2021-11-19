@@ -8,6 +8,11 @@
     </div>
   </div>
   <ProductList :products="products" />
+  <div class="repo">
+    <h2>
+      <a href="https://github.com/maxaham/Car-Saver">Repository</a>
+    </h2>
+  </div>
 </div>
 </template>
 
@@ -44,6 +49,11 @@ export default {
   width: 50%;
 }
 
+.repo {
+  display: flex;
+  justify-content: center;
+}
+
 form {
   display: table;
   width: 100%;
@@ -63,4 +73,5 @@ input {
   width: 100%;
   height: 40px;
 }
+
 </style>
