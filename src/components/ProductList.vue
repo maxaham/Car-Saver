@@ -2,13 +2,14 @@
 <div class="wrapper">
   <div class="products">
     <div class="product" v-for="product in products" :key="product.id">
-      <div class="info">
-        <h1>{{product.name}}</h1>
-        <p>{{product.country}}</p>
+      <div class="info" v-bind:style="{ 'background-color': product.color }">
+        <h1>{{product.make}}</h1>
+        <h2>{{product.model}}</h2>
+        <p>{{product.state}}</p>
       </div>
-      <div class="image">
+      <!--<div class="image">
         <img :src="'/images/products/'+product.image">
-      </div>
+      </div>-->
       <div class="price">
         <h2>{{product.price}}</h2>
         <button class="auto" @click="add(product)">Add to Cart</button> <!--push to cart -->
@@ -69,7 +70,7 @@ export default {
   background: #F2921D;
   color: #000;
   padding: 10px 30px;
-  height: 80px;
+  height: 100px;
 }
 
 .info h1 {

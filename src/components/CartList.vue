@@ -3,12 +3,13 @@
   <div class="products">
     <div class="product" v-for="product in products" :key="product.id">
       <div class="info">
-        <h1>{{product.name}}</h1>
-        <p>{{product.country}}</p>
+        <h1>{{product.make}}</h1>
+        <h2>{{product.model}}</h2>
+        <p>{{product.state}}</p>
       </div>
-      <div class="image">
+      <!--<div class="image">
         <img :src="'/images/products/'+product.image">
-      </div>
+      </div>-->
       <div class="price">
         <h3>{{product.price}}</h3>
         <button class="auto" @click="remove(product)">Remove from Cart</button>
